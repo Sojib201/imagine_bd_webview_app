@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../app/app.dart';
-import '../app/constants.dart';
 import '../controllers/connectivity_controller.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -56,89 +54,6 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: Container(
-      //   decoration: const BoxDecoration(
-      //     gradient: LinearGradient(
-      //       colors: [Color(0xFF0A2540), Color(0xFF0D3461), Color(0xFF0A2540)],
-      //       begin: Alignment.topLeft,
-      //       end: Alignment.bottomRight,
-      //     ),
-      //   ),
-      //   child: SafeArea(
-      //     child: Center(
-      //       child: FadeTransition(
-      //         opacity: _fade,
-      //         child: SlideTransition(
-      //           position: _slide,
-      //           child: Column(
-      //             mainAxisAlignment: MainAxisAlignment.center,
-      //             children: [
-      //               Container(
-      //                 width: 140,
-      //                 height: 140,
-      //                 decoration: BoxDecoration(
-      //                   color: Colors.white,
-      //                   borderRadius: BorderRadius.circular(24),
-      //                   boxShadow: [
-      //                     BoxShadow(
-      //                       color: AppColors.accent.withOpacity(0.4),
-      //                       blurRadius: 30,
-      //                       offset: const Offset(0, 10),
-      //                     ),
-      //                   ],
-      //                 ),
-      //                 child: Center(
-      //                   child: Padding(
-      //                     padding: const EdgeInsets.all(8.0),
-      //                     child: Text(
-      //                       'Imagine BD',
-      //                       textAlign: TextAlign.center,
-      //                       style: TextStyle(
-      //                         fontSize: 28,
-      //                         fontWeight: FontWeight.w900,
-      //                         color: AppColors.primary,
-      //                         letterSpacing: 1,
-      //                       ),
-      //                     ),
-      //                   ),
-      //                 ),
-      //               ),
-      //
-      //               const SizedBox(height: 24),
-      //
-      //               const Text(
-      //                 'Imagine BD',
-      //                 style: TextStyle(
-      //                   color: Colors.white,
-      //                   fontSize: 26,
-      //                   fontWeight: FontWeight.w700,
-      //                   letterSpacing: 1.5,
-      //                 ),
-      //               ),
-      //
-      //               const SizedBox(height: 6),
-      //
-      //               Text(
-      //                 'imaginebd.net',
-      //                 style: TextStyle(
-      //                   color: Colors.white.withOpacity(0.5),
-      //                   fontSize: 13,
-      //                 ),
-      //               ),
-      //
-      //               const SizedBox(height: 56),
-      //
-      //               const SpinKitThreeBounce(
-      //                 color: AppColors.accent,
-      //                 size: 28,
-      //               ),
-      //             ],
-      //           ),
-      //         ),
-      //       ),
-      //     ),
-      //   ),
-      // ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

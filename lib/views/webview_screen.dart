@@ -26,28 +26,30 @@ class WebViewScreen extends StatelessWidget {
           if (shouldExit) _showExitDialog();
         },
         child: Scaffold(
-          appBar: _buildAppBar(ctrl),
-          body: Stack(
-            children: [
-              Obx(() => ctrl.hasError.value
-                  ? ErrorView(onRetry: ctrl.reload)
-                  : WebViewWidget(controller: ctrl.webViewController)),
-
-              Obx(() {
-                if (!ctrl.isLoading.value) return const SizedBox.shrink();
-                return LinearProgressIndicator(
-                  value: ctrl.loadingProgress.value > 0
-                      ? ctrl.loadingProgress.value / 100
-                      : null,
-                  minHeight: 3,
-                  backgroundColor: Colors.transparent,
-                  valueColor:
-                      const AlwaysStoppedAnimation<Color>(AppColors.accent),
-                );
-              }),
-            ],
+          //appBar: _buildAppBar(ctrl),
+          body: SafeArea(
+            child: Stack(
+              children: [
+                Obx(() => ctrl.hasError.value
+                    ? ErrorView(onRetry: ctrl.reload)
+                    : WebViewWidget(controller: ctrl.webViewController)),
+            
+                Obx(() {
+                  if (!ctrl.isLoading.value) return const SizedBox.shrink();
+                  return LinearProgressIndicator(
+                    value: ctrl.loadingProgress.value > 0
+                        ? ctrl.loadingProgress.value / 100
+                        : null,
+                    minHeight: 3,
+                    backgroundColor: Colors.transparent,
+                    valueColor:
+                        const AlwaysStoppedAnimation<Color>(AppColors.accent),
+                  );
+                }),
+              ],
+            ),
           ),
-          bottomNavigationBar: _buildBottomBar(ctrl),
+          //bottomNavigationBar: _buildBottomBar(ctrl),
         ),
       );
     });
