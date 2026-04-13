@@ -5,7 +5,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.11.0
+#  sdk: ^3.11.0
+  sdk: '>=3.0.0 <4.0.0'
 
 
 dependencies:
@@ -23,7 +24,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.14.4
 
+flutter_icons:
+  image_path: "assets/imagine.png"
+  android: true
+  ios: true
 
   flutter_lints: ^6.0.0
 
@@ -31,8 +37,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
